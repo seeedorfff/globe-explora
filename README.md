@@ -70,7 +70,7 @@ First Part:
 <img src='./public/vid-walkthrough.gif' title='Video Walkthrough 1' width='' alt='Video Walkthrough' />
 
 Second Part: 
-<img src='' title='Video Walkthrough 2' alt='Video Walkthrough'>
+<img src='./public/vid-walkthrough-2.gif' title='Video Walkthrough 2' alt='Video Walkthrough'>
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap

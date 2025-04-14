@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
+import '../styles/visualizations.css';
 
 function CountryDetail({ countries }) {
   const { countryCode } = useParams();
