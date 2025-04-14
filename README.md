@@ -4,7 +4,7 @@ Submitted by: **Seedorf Otchere**
 
 This web app: **Globe Explora, allows users to explore a list of countries by fetching data from a public API. It displays key country details such as population, region, and capital. Users can filter countries by region, search for specific countries, and view summary statistics like total countries, average population, and number of regions.**
 
-Time spent: **10** hours spent in total
+Time spent: **15** hours spent in total
 
 ## Required Features
 
