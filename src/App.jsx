@@ -1,6 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
+import CountryDetail from './components/CountryDetail';
+import DataVisualizations from './components/DataVisualizations';
 import './App.css';
 
 const App = () => {
@@ -25,16 +28,26 @@ const App = () => {
     fetchCountries();
   }, []);
 
+  if (loading) {
+    return <div className="loading">Loading Countries...</div>;
+  }
+
   return (
-    <div className='app-container'>
-      <h1 className='app-title'>Globe Explora</h1>
-      {loading ? (
-        <p>Loading Countries...</p>
-      ) : (
-        <Dashboard countries={countries} />
-      )}
-    </div>
-  )
+    <Router>
+      <div className='app-container'>
+        <h1 className='app-title'>Globe Explora</h1>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <DataVisualizations countries={countries} />
+              <Dashboard countries={countries} />
+            </>
+          } />
+          <Route path="/country/:countryCode" element={<CountryDetail countries={countries} />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
